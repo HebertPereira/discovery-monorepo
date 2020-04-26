@@ -1,39 +1,32 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 
 
-class App extends Component {
-    state = {
-        nome: ' '
-    }
-    modificarNome = (event) => {
-        this.setState({
-            nome: event.target.value
-        })
 
+function App(props) {
+    const modificarNome = event => {
+        console.log(event.target.value)
     }
 
-    criaComboBox = () => {
+
+    const criaComboBox = () => {
         const opcoes = ["fulano", "Cicrano"]
-        const comboBoxOpcoes = opcoes.map( opcoes => <option>{opcoes}</option> )
-        
-        return(
+        const comboBoxOpcoes = opcoes.map(opcao => <option>{opcao}</option>)
+
+        return (
             <select>
                 {comboBoxOpcoes}
             </select>
         )
     }
 
-    render() {
-        const MeuComboBox = () => this.criaComboBox()
-        return (
-            <>
-                <h1>{this.state.nome} say hello world for this thing</h1>
-                <input id="meuNome" placeholder="Digite seu nome" type="text" onChange= {this.modificarNome}/>
-                <MeuComboBox/>
-            </>
-        )
+    const MeuComboBox = () => criaComboBox()
 
-    }
+    return (
+        <>
+            <h1>Hello {props.nome} sua idade é {props.idade}</h1>
+            <input className="text-centralizado" id="meuNome" placeholder="Digite seu nome" type="text" onChange={modificarNome} />
+            <MeuComboBox />
+        </>
+    )
 }
 export default App;
