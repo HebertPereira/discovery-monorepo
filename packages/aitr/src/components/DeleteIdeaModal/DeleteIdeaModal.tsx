@@ -1,12 +1,10 @@
 import React, { FormEvent } from 'react';
 import { FiX } from 'react-icons/fi';
-import { toast } from 'react-toastify';
 import Modal from 'react-modal';
+import { toast } from 'react-toastify';
 
 import { IdeaContextProps, useIdeas } from '../../providers/Auth';
-
 import DefaultButton from '../common/DefaultButton/DefaultButton';
-
 import { DeleteIdeaModalContainer } from './styles';
 
 interface DeleteTransactionModalProps {

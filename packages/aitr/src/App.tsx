@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+
+import Header from './components/Header/Header';
 import { IdeaProvider } from './providers/Auth';
 import GlobalRoutes from './routes/globalRoutes';
 import GlobalStyles from './styles/globalStyles';
-import Header from './components/Header/Header';
 
 Modal.setAppElement('#root');
 
