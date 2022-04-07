@@ -1,0 +1,19 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "license": "MIT",
+  "author": "Hebert P <hebertpktd@gmail.com>",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "typescript": "^4.6.3",
+    "@monorepo/eslint-config": "*"
+  }
+}
