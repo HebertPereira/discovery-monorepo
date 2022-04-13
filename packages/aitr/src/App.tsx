@@ -22,10 +22,10 @@ function App() {
   return (
     <IdeaProvider>
       <GlobalStyles />
-      <Header onOpenNewIdeaModal={handleOpenNewIdeaModal} />
+      <Header onOpenNewIdeaModal={() => handleOpenNewIdeaModal()} />
       <GlobalRoutes
         isOpenCreateModal={isOpenCreateModal}
-        handleCloseIdeaModal={handleCloseIdeaModal}
+        handleCloseIdeaModal={() => handleCloseIdeaModal()}
       />
     </IdeaProvider>
   );

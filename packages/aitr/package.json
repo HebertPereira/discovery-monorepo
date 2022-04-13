@@ -11,6 +11,8 @@
     "@types/react-dom": "^17.0.14",
     "@types/react-modal": "^3.13.1",
     "@types/styled-components": "^5.1.24",
+    "@types/axios": "^0.14.0",
+    "axios": "^0.24.0",
     "miragejs": "^0.1.43",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -46,8 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "axios": "^0.24.0"
-  }
+  "devDependencies": {}
 }

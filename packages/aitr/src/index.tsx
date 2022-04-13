@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ToastContainer } from 'react-toastify';
+
 import { createServer, Model } from 'miragejs';
 
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import App from './App';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 createServer({
   models: {
@@ -16,35 +17,36 @@ createServer({
       ideas: [
         {
           id: 1,
-          title: "Criar um app de lista de itens da geladeira",
-          description: "Criar um app para listar os itens que tenho na minha geladeira para que não estrague as coisas.",
+          title: 'Criar um app de lista de itens da geladeira',
+          description:
+            'Criar um app para listar os itens que tenho na minha geladeira para que não estrague as coisas.',
           tags: 'economia,react-native,open-source,nodejs'
         }
       ]
-    })
+    });
   },
   routes() {
     this.namespace = 'api';
 
-    this.get("/ideas", () => {
+    this.get('/ideas', () => {
       return this.schema.all('ideas');
     });
 
-    this.post("/ideas", (schema, request) => {
+    this.post('/ideas', (schema, request) => {
       const data = JSON.parse(request.requestBody);
 
       return schema.create('ideas', data);
     });
 
-    this.patch("/ideas/:id", (schema, request): any => {
-      const newAttrs = JSON.parse(request.requestBody)
-      const id = request.params.id;
+    this.patch('/ideas/:id', (schema, request): any => {
+      const newAttrs = JSON.parse(request.requestBody);
+      const { id } = request.params;
 
       return schema.find('ideas', id)?.update(newAttrs);
     });
 
-    this.delete("/ideas/:id", (schema, request): any => {
-      const id = request.params.id;
+    this.delete('/ideas/:id', (schema, request): any => {
+      const { id } = request.params;
 
       return schema.find('ideas', id)?.destroy();
     });

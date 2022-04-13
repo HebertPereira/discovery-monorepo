@@ -1,5 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
+import { getDate } from '@monorepo/utils';
 import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
@@ -16,7 +21,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {`${getDate('atDate')} - ${getDate('atTime')} - learn react`}
         </a>
       </header>
     </div>
