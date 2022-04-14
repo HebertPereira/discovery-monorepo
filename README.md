@@ -82,6 +82,22 @@ Open you terminal and:
 Starts the test runner in interactive watch mode using LernaJS.
 \*\*In ReactJs apps you need to go to the respective directory and run `yarn test`.
 
+## links uteis: 
+
+Monorepo concepts:
+[Monorepo? O que é? Devo usar?](https://dev.to/stanley/monorepo-o-que-e-devo-usar-133c) 
+
+Monorepo in practice: 
+[Monorepo ReactJS, Node.js & React Native com Yarn Workspaces](https://www.youtube.com/watch?v=k5TkBcUTJus)
+
+LernaJS in practice:
+[How to Use Lerna](https://www.youtube.com/watch?v=p6qoJ4apCjA)
+
+Bonus: 
+
+Tools for Monorepo:
+[11 Great Tools for a Monorepo in 2021](https://blog.bitsrc.io/11-tools-to-build-a-monorepo-in-2021-7ce904821cc2)
+
 ## 🪛 Technologies
 
 Your Node version needs to be 17 or higher.
